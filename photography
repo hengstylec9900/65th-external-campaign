@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>65週年｜攝影師介紹（Dingdong）— Classic Split</title>
+  <style>
+    :root{
+      --bg:#0f1115;
+      --ink:#e6e8ee;
+      --muted:#a9b0bd;
+      --line:#232733;
+      --card:#161a22;
+      --brand:#89b4fa;
+      --pill:#1f2532;
+      --radius:20px;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans TC","PingFang TC","Helvetica Neue",Arial,"Microsoft JhengHei",sans-serif}
+    a{color:inherit}
+    img{display:block;max-width:100%;height:auto}
+
+    .wrap{max-width:var(--max);margin:48px auto;padding:0 20px;display:grid;gap:32px}
+    .chip{display:inline-flex;align-items:center;gap:.5em;background:var(--pill);border:1px solid var(--line);padding:.45em .8em;border-radius:999px;color:var(--muted);font-size:.85rem}
+    .tagbar{display:flex;flex-wrap:wrap;gap:10px}
+    .eyebrow{font-size:.9rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
+    .headline{letter-spacing:.02em}
+    .muted{color:var(--muted)}
+    .divider{height:1px;background:linear-gradient(90deg,transparent, var(--line), transparent)}
+
+    /* ---------- Classic Split ---------- */
+    .vA{display:grid;grid-template-columns:1.1fr 1.4fr;gap:36px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:28px}
+    .vA .left{display:grid;gap:16px;align-content:start}
+    .vA .right{display:grid;gap:14px;align-content:start}
+    .vA h2{font-size:2rem;margin:.1em 0 .25em}
+    .vA p{line-height:1.75}
+
+    /* Photo frame */
+    .photo{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#1b2030}
+    .photo img{width:100%;aspect-ratio:4/5;object-fit:cover}
+
+    /* Responsive */
+    @media (max-width: 960px){
+      .vA{grid-template-columns:1fr}
+      .vA h2{font-size:1.7rem}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap" aria-label="攝影師介紹：Classic Split">
+    <section class="vA" aria-labelledby="vA-title">
+      <div class="left">
+        <figure class="photo">
+          <img src="https://hengstyle.com/storage/media/5230ec49-fbc3-444a-9f36-de7cd510ee6c.png" alt="叮咚 Dingdong — 代表作肖像/作品">
+        </figure>
+        <div class="tagbar" aria-label="合作品牌">
+          <span class="chip">Sony</span>
+          <span class="chip">全聯福利中心</span>
+          <span class="chip">台灣高鐵</span>
+        </div>
+      </div>
+      <div class="right">
+        <span class="eyebrow">65th Photo Exhibition</span>
+        <h2 id="vA-title" class="headline">叮咚 Dingdong</h2>
+        <p class="muted">在生活倏忽中持續捕捉，為平凡的日常拍下充滿柔軟的瞬間。作品以日系清新感聞名，擅長透過鏡頭記錄平凡日常中的美好。</p>
+        <div class="divider"></div>
+        <p>曾與 Sony、全聯福利中心、台灣高鐵等品牌合作，並出版攝影集《十年 A DECADE》、《TOKYO BABY》、《BERLIN BABY》。</p>
+        <div class="tagbar" aria-label="著作">
+          <span class="chip">《十年 A DECADE》</span>
+          <span class="chip">《TOKYO BABY》</span>
+          <span class="chip">《BERLIN BABY》</span>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
