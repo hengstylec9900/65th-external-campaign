@@ -1,79 +1,194 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>65週年｜攝影師介紹（Dingdong）— Classic Split</title>
-  <style>
-    :root{
-      --bg:#0f1115;
-      --ink:#e6e8ee;
-      --muted:#a9b0bd;
-      --line:#232733;
-      --card:#161a22;
-      --brand:#89b4fa;
-      --pill:#1f2532;
-      --radius:20px;
-      --shadow:0 10px 30px rgba(0,0,0,.35);
-      --max:1100px;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans TC","PingFang TC","Helvetica Neue",Arial,"Microsoft JhengHei",sans-serif}
-    a{color:inherit}
-    img{display:block;max-width:100%;height:auto}
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>恆隆行 65 週年｜Mobile LP（3 區塊）</title>
+<style>
+  :root{
+    --bg:#f6f7f8;--ink:#0f172a;--muted:#64748b;--card:#ffffff;--line:#e5e7eb;
+    --accent:#0b0f19;--accent-ink:#fff;--radius:16px;--shadow:0 8px 28px rgba(15,23,42,.08);
+    --max:1200px;--brand-red:#E32E35;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans TC","PingFang TC","Helvetica Neue",Arial,"Microsoft JhengHei",sans-serif}
+  img{max-width:100%;height:auto;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:20px}
+  @media (min-width:1024px){ .wrap{padding:32px 40px} }
 
-    .wrap{max-width:var(--max);margin:48px auto;padding:0 20px;display:grid;gap:32px}
-    .chip{display:inline-flex;align-items:center;gap:.5em;background:var(--pill);border:1px solid var(--line);padding:.45em .8em;border-radius:999px;color:var(--muted);font-size:.85rem}
-    .tagbar{display:flex;flex-wrap:wrap;gap:10px}
-    .eyebrow{font-size:.9rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
-    .headline{letter-spacing:.02em}
-    .muted{color:var(--muted)}
-    .divider{height:1px;background:linear-gradient(90deg,transparent, var(--line), transparent)}
+  /* headings & utils */
+  .row-head{display:flex;align-items:flex-end;justify-content:space-between;margin:0 0 12px}
+  .row-head h2{margin:0;font-size:18px}
+  .muted{color:var(--muted)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card)}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
 
-    /* ---------- Classic Split ---------- */
-    .vA{display:grid;grid-template-columns:1.1fr 1.4fr;gap:36px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:28px}
-    .vA .left{display:grid;gap:16px;align-content:start}
-    .vA .right{display:grid;gap:14px;align-content:start}
-    .vA h2{font-size:2rem;margin:.1em 0 .25em}
-    .vA p{line-height:1.75}
+  /* 1) 恆隆行代理品牌（Logo+文字合一格） */
+  section{margin-top:26px}
+  @media (min-width:1024px){ section{margin-top:36px} }
+  .brands{padding:18px}
+  .brand-grid{display:grid;gap:14px;grid-template-columns:repeat(4,minmax(0,1fr))}
+  @media (min-width:768px){ .brand-grid{grid-template-columns:repeat(6,minmax(0,1fr))} }
+  @media (min-width:1024px){ .brand-grid{grid-template-columns:repeat(8,minmax(0,1fr))} }
+  .brand{display:grid;justify-items:center;gap:8px}
+  .brand .logo{width:64px;height:64px;border-radius:50%;border:1px solid var(--line);background:#fff;display:grid;place-items:center;overflow:hidden}
+  .brand .logo img{width:100%;height:100%;object-fit:contain;padding:8px;background:linear-gradient(145deg,#f8fafc,#eef2f7)}
+  .brand .bname{font-size:12px;color:#475569}
 
-    /* Photo frame */
-    .photo{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#1b2030}
-    .photo img{width:100%;aspect-ratio:4/5;object-fit:cover}
+  /* 2) 影片同款｜限時特價（產品卡） */
+  .grid{display:grid;gap:16px}
+  .grid.products{grid-template-columns:repeat(2,minmax(0,1fr))}
+  @media (min-width:768px){ .grid.products{grid-template-columns:repeat(3,minmax(0,1fr))} }
+  .product{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--card);box-shadow:var(--shadow);display:flex;flex-direction:column}
+  .product .top{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;font-size:12px}
+  .badge{font-size:11px;padding:4px 8px;border-radius:999px;background:#fff0f1;border:1px solid #ffd8dc;color:var(--brand-red);font-weight:700}
+  .product .ph{aspect-ratio:4/3;background:linear-gradient(145deg,#e5e7eb,#d6d3d1);display:grid;place-items:center;color:#6b7280}
+  .product .body{padding:12px}
+  .product .name{font-weight:800;font-size:14px}
+  .product .price{color:#b91c1c;font-weight:800;margin:6px 0 2px}
+  .product .meta{font-size:12px;color:#94a3b8}
+  .product .actions{margin-top:10px}
+  .linkbtn{display:inline-flex;align-items:center;justify-content:center;width:100%;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:#fff}
+  .linkbtn:hover{background:#f8fafc}
 
-    /* Responsive */
-    @media (max-width: 960px){
-      .vA{grid-template-columns:1fr}
-      .vA h2{font-size:1.7rem}
-    }
-  </style>
+  /* 3) 加入 LINE 好友（強 CTA） */
+  .line-cta{display:grid;gap:10px;padding:16px;border-radius:18px;border:1px solid #bbf7d0;background:linear-gradient(180deg,#ecfdf5 0%, #ffffff 100%)}
+  .line-cta .title{font-weight:900}
+  .line-cta .row{display:flex;gap:10px;flex-wrap:wrap}
+
+  /* footer spacer */
+  .foot-space{height:10px}
+</style>
 </head>
 <body>
-  <main class="wrap" aria-label="攝影師介紹：Classic Split">
-    <section class="vA" aria-labelledby="vA-title">
-      <div class="left">
-        <figure class="photo">
-          <img src="https://hengstyle.com/storage/media/5230ec49-fbc3-444a-9f36-de7cd510ee6c.png" alt="叮咚 Dingdong — 代表作肖像/作品">
-        </figure>
-        <div class="tagbar" aria-label="合作品牌">
-          <span class="chip">Sony</span>
-          <span class="chip">全聯福利中心</span>
-          <span class="chip">台灣高鐵</span>
-        </div>
+  <div class="wrap">
+
+    <!-- 1) 恆隆行代理品牌 -->
+    <section id="brands" class="card brands">
+      <div class="row-head">
+        <h2>我們代理的品牌</h2>
       </div>
-      <div class="right">
-        <span class="eyebrow">65th Photo Exhibition</span>
-        <h2 id="vA-title" class="headline">叮咚 Dingdong</h2>
-        <p class="muted">在生活倏忽中持續捕捉，為平凡的日常拍下充滿柔軟的瞬間。作品以日系清新感聞名，擅長透過鏡頭記錄平凡日常中的美好。</p>
-        <div class="divider"></div>
-        <p>曾與 Sony、全聯福利中心、台灣高鐵等品牌合作，並出版攝影集《十年 A DECADE》、《TOKYO BABY》、《BERLIN BABY》。</p>
-        <div class="tagbar" aria-label="著作">
-          <span class="chip">《十年 A DECADE》</span>
-          <span class="chip">《TOKYO BABY》</span>
-          <span class="chip">《BERLIN BABY》</span>
+      <div class="brand-grid">
+        <a class="brand" href="https://shop.hengstyle.com/v2/official/SalePageCategory/450777?sortMode=Newest">
+          <div class="logo"><img alt="Dyson" src="https://hengstyle.com/storage/media/cdd72e35-1579-4a20-b01e-fcd66a4a58bf.svg" /></div>
+          <div class="bname">Dyson</div>
+        </a>
+        <a class="brand" href="https://shop.hengstyle.com/v2/official/SalePageCategory/545234?sortMode=Curator">
+          <div class="logo"><img alt="Blueair" src="https://hengstyle.com/storage/media/6fd74165-1248-45a8-b120-3272b2830b55.svg" /></div>
+          <div class="bname">Blueair</div>
+        </a>
+        <a class="brand" href="https://shop.hengstyle.com/v2/official/SalePageCategory/554708?sortMode=Curator">
+          <div class="logo"><img alt="WMF" src="https://hengstyle.com/storage/media/1d1856cf-352a-40c7-9d72-2221afcb628f.svg" /></div>
+          <div class="bname">WMF</div>
+        </a>
+        <a class="brand" href="https://shop.hengstyle.com/v2/official/SalePageCategory/450774?sortMode=Newest">
+          <div class="logo"><img alt="BRAUN" src="https://hengstyle.com/storage/media/5516bb28-a807-4845-8bd4-93b744ee7684.svg" /></div>
+          <div class="bname">BRAUN</div>
+        </a>
+        <a class="brand" href="https://shop.hengstyle.com/v2/official/SalePageCategory/450795?sortMode=PriceHighToLow">
+          <div class="logo"><img alt="Sodastream" src="https://hengstyle.com/storage/media/0097db9d-fd2c-48f0-ba1d-575790b2d49a.svg" /></div>
+          <div class="bname">Sodastream</div>
+        </a>
+        <a class="brand" href="https://shop.hengstyle.com/v2/official/SalePageCategory/450800?sortMode=PageView">
+          <div class="logo"><img alt="VERMICULAR" src="https://hengstyle.com/storage/media/3f758667-7469-49f1-85d2-c2f20aa01640.svg" /></div>
+          <div class="bname">VERMICULAR</div>
+        </a>
+        <a class="brand" href="https://shop.hengstyle.com/v2/official/SalePageCategory/450798?sortMode=PageView">
+          <div class="logo"><img alt="Style" src="https://hengstyle.com/storage/media/280c4d38-c050-429f-8ca7-d1e219053731.svg" /></div>
+          <div class="bname">Style</div>
+        </a>
+        <a class="brand" href="https://shop.hengstyle.com/v2/official/SalePageCategory/511448?sortMode=Curator">
+          <div class="logo"><img alt="CrashBaggage" src="https://hengstyle.com/storage/media/9fdda43b-5f30-4333-969e-421e165c0b84.svg" /></div>
+          <div class="bname">CrashBaggage</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- 2) 影片同款｜限時特價 -->
+    <section id="featured">
+      <div class="row-head">
+        <h2>影片同款｜限時特價</h2>
+      </div>
+      <div class="grid products">
+        <!-- 6 張產品卡：一行兩個（手機） -->
+        <article class="product">
+          <div class="top"><span class="badge">65 週年價</span><span class="muted">Dyson</span></div>
+          <div class="ph"><img alt="Dyson" src="https://hengstyle.com/storage/media/f9ed75c0-4206-43fd-8093-4b6e076392ef.jpg"></div>
+          <div class="body">
+            <div class="name">V12s Detect Slim Submarine 乾濕全能洗地吸塵器</div>
+            <div class="price">NT$14,900</div>
+            <div class="meta">買就送智慧電動主吸頭</div>
+            <div class="actions"><a class="linkbtn" href="https://shop.hengstyle.com/SalePage/Index/10464408">商品詳情</a></div>
+          </div>
+        </article>
+        <article class="product">
+          <div class="top"><span class="badge">主廚推薦</span><span class="muted">Vermicular</span></div>
+          <div class="ph"><img alt="Vermicular" src="https://hengstyle.com/storage/media/63306326-40a3-46d8-9ce3-cc8d0c47e4e1.jpg"></div>
+          <div class="body">
+            <div class="name">琺瑯鑄鐵鍋 OP2 26cm（海鹽白）</div>
+            <div class="price">NT$9,980</div>
+            <div class="meta">日本職人工藝</div>
+            <div class="actions"><a class="linkbtn" href="https://shop.hengstyle.com/SalePage/Index/9578250">商品詳情</a></div>
+          </div>
+        </article>
+        <article class="product">
+          <div class="top"><span class="badge">智能親膚</span><span class="muted">Braun</span></div>
+          <div class="ph"><img alt="Braun" src="https://hengstyle.com/storage/media/94be59a3-0669-4492-9855-6670e84d9a8b.jpg"></div>
+          <div class="body">
+            <div class="name">9 系列 Pro+ 電鬍刀 9577cc</div>
+            <div class="price">NT$12,900</div>
+            <div class="meta">舒適高效</div>
+            <div class="actions"><a class="linkbtn" href="https://shop.hengstyle.com/SalePage/Index/9904841">商品詳情</a></div>
+          </div>
+        </article>
+        <article class="product">
+          <div class="top"><span class="badge">設計感</span><span class="muted">Crash Baggage</span></div>
+          <div class="ph"><img alt="Crash Baggage" src="https://hengstyle.com/storage/media/f5135912-ff09-44f0-9024-ab20cc9bead7.jpg"></div>
+          <div class="body">
+            <div class="name">ICON 經典撞擊行李箱（經典黃）</div>
+            <div class="price">—</div>
+            <div class="meta">搶眼凹痕外型</div>
+            <div class="actions"><a class="linkbtn" href="https://shop.hengstyle.com/SalePage/Index/9485447">商品詳情</a></div>
+          </div>
+        </article>
+        <article class="product">
+          <div class="top"><span class="badge">Fusiontec</span><span class="muted">WMF</span></div>
+          <div class="ph"><img alt="WMF" src="https://hengstyle.com/storage/media/4a03bdb5-0f46-4d16-a957-a4d15e5465f7.jpg"></div>
+          <div class="body">
+            <div class="name">Fusiontec Mineral 低身湯鍋 24cm</div>
+            <div class="price">—</div>
+            <div class="meta">無毒無塗層</div>
+            <div class="actions"><a class="linkbtn" href="https://shop.hengstyle.com/SalePage/Index/10601919">商品詳情</a></div>
+          </div>
+        </article>
+        <article class="product">
+          <div class="top"><span class="badge">人氣</span><span class="muted">Sodastream</span></div>
+          <div class="ph"><img alt="Sodastream" src="https://hengstyle.com/storage/media/764cb7f5-8b8e-4dc2-8833-7adc4e7d81d3.jpg"></div>
+          <div class="body">
+            <div class="name">ART 自動扣瓶氣泡水機</div>
+            <div class="price">—</div>
+            <div class="meta">快扣鋼瓶機型</div>
+            <div class="actions"><a class="linkbtn" href="https://shop.hengstyle.com/SalePage/Index/8157134">商品詳情</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3) 加入恆隆行 LINE 好友 -->
+    <section id="line">
+      <div class="line-cta card">
+        <div class="title">加入恆隆行 LINE 好友</div>
+        <div class="muted">綁定 LINE 會員，立即領 300 元優惠券，掌握 65 週年限定活動。</div>
+        <div class="row">
+          <a class="btn primary" href="https://shop.hengstyle.com/v2/LineAuth/Auth" target="_blank" rel="noopener noreferrer">立即加入</a>
+          <a class="btn" href="#featured">看看 65 週年精選</a>
         </div>
       </div>
     </section>
-  </main>
+
+    <div class="foot-space"></div>
+  </div>
 </body>
 </html>
